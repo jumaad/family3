@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+  <meta charset="UTF-8">
+  <title>شجرة العائلة التفاعلية</title>
+  <script src="https://unpkg.com/family-chart@1.0.2/dist/family-chart.min.js"></script>
+  <style>
+    body { font-family: 'Segoe UI', sans-serif; background-color: #f3f3f3; margin: 0; padding: 20px; }
+    h1 { text-align: center; color: #2e7d32; }
+    #tree { margin: auto; max-width: 1000px; }
+  </style>
+</head>
+<body>
+  <h1>🌿 شجرة العائلة: عبدالله الجمعة</h1>
+  <div id="tree"></div>
+
+  <script>
+    const chart = new FamilyChart({
+      container: "#tree",
+      nodes: [
+        {
+          id: 1,
+          name: "عبدالله الجمعة",
+          gender: "male",
+          birthDate: "1938",
+          place: "الباب",
+          title: "دهان + حلاقة"
+        },
+        {
+          id: 2,
+          name: "علي عبدالله",
+          gender: "male",
+          father: 1
+        },
+        {
+          id: 3,
+          name: "فاطمة عبدالله",
+          gender: "female",
+          father: 1
+        }
+      ]
+    });
+  </script>
+</body>
+</html>
